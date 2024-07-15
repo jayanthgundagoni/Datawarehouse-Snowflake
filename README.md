@@ -7,18 +7,7 @@ This repository contains SQL worksheets designed to analyze an Instacart dataset
 
 The repository includes two main SQL scripts:
 
-1. **InstaCart_Fact_Dim.sql:** This script sets up the database tables in Snowflake and loads the data from CSV files stored in an S3 bucket.
-Stage Creation: Creates a stage to load data from an S3 bucket.
-File Format Creation: Defines the CSV file format for data loading.
-**Table Creation and Data Loading:**
-aisles: Creates and populates the aisles table.
-departments: Creates and populates the departments table.
-orders: Creates and populates the orders table.
-products: Creates and populates the products table.
-order_products: Creates and populates the order_products table.
-**Dimensional Tables:**
-dim_users: Creates a dimension table for users from the orders table.
-dim_products: Creates a dimension table for products with product details.
+1. **InstaCart_Fact_Dim.sql:** This script sets up the database tables, including fact and dimension tables, and loads the data from CSV files stored in an S3 bucket.
 2. **InstaCart_Analysis.sql:** This script contains various analytical queries to extract insights from the data
 
 ## Services Used
@@ -29,5 +18,7 @@ Snowflake is used as the data warehouse for storing and querying the Instacart d
 
 ## Conclusion
 By using the scripts provided in this repository, you can easily set up a database with the Instacart dataset and perform various analyses to gain insights into customer behavior and product performance. These insights can help drive business decisions and improve overall strategy.
+
+Dataset Reference: https://www.kaggle.com/competitions/instacart-market-basket-analysis/data
 
 
