@@ -59,3 +59,16 @@ SET email = null;
 //01b5cdcf-0001-f103-0006-1fc60001ce72
 SELECT * FROM OUR_FIRST_DB.public.test before (statement => '01b5cdcf-0001-f103-0006-1fc60001ce72')
 
+// Do not override
+CREATE OR REPLACE TABLE OUR_FIRST_DB.public.test_1 as
+SELECT * FROM OUR_FIRST_DB.public.test before (statement => '01b5cdcf-0001-f103-0006-1fc60001ce72')
+
+TRUNCATE TABLE OUR_FIRST_DB.PUBLIC.test;
+
+SELECT * FROM OUR_FIRST_DB.public.test;
+
+INSERT INTO OUR_FIRST_DB.public.test
+SELECT * FROM OUR_FIRST_DB.PUBLIC.test_1;
+
+
+SELECT * FROM OUR_FIRST_DB.public.test;
